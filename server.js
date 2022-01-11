@@ -8,16 +8,21 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-covid = [
-  { name: "day1", mortes: 100, infectados: 6 },
-  { name: "day2", mortes: 100, infectados: 6 },
-  { name: "day3", mortes: 100, infectados: 6 },
-  { name: "day4", mortes: 100, infectados: 6 },
-  { name: "day5", mortes: 100, infectados: 6 },
-  { name: "day6", mortes: 100, infectados: 6 },
-  { name: "day7", mortes: 100, infectados: 6 },
-  { name: "day8", mortes: 100, infectados: 6 }
+covidMorteInfectados = [
+  { name: "day1", mortes: 4098, infectados:  1130000},
+  { name: "day2", mortes: 3029, infectados: 868029 },
+  { name: "day3", mortes: 5865, infectados: 2520000},
+  { name: "day4", mortes: 7754, infectados: 2540000 },
+  { name: "day5", mortes: 7748, infectados: 2510000 },
+  { name: "day6", mortes: 6663, infectados: 2520000}
 ];
+
+const daysShow = 4
+
+for(var i =0; i < daysShow; i++){
+  console.log(`Dia ${i+1} => ${covidMorteInfectados[i].infectados} `)
+}
+
 
 const http = require("http");
 const server = http.createServer(function (request, response) {
