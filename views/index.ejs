@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D3 Test</title>
+  </head>
+  <body>
+    <form action="">
+      <input
+        type="text"
+        id="table"
+        name="table"
+        onkeypress="checkChar"
+        placeholder="Digite o dia: "
+      />
+      <input type="submit" value="Enviar" />
+    </form>
+    <script>
+        const input = document.getElementById("table");
+        input.addEventListener("keypress", (e) => {
+          console.log(e.target.value);
+          console.log(e.keyCode)
+        });
+    
+        function checkChar(e) {
+          const char = String.fromCharCode(e, keyCode);
+    
+          console.log(e.keyCode);
+          console.log(char);
+        }
+      </script>
+  </body>
+  
+</html>
