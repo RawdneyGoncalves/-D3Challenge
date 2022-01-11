@@ -23,5 +23,5 @@ estou desenvolvendo um pequeno painel que irá ser consumido da API
 
 Front-end básico: 
 Foram corrigidos os erros de input, com o bloqueio de caracteres especiais, 
-Link do que eu usei: https://keycode.info/
+Link do que eu usei para verificar as keys: https://keycode.info/
 somente um painel básico para testar a API via html
