@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>D3 Test</title>
+    <h1>Covid Table</h1>
   </head>
   <body>
     <form action="">
@@ -18,19 +19,24 @@
       <input type="submit" value="Enviar" />
     </form>
     <script>
-        const input = document.getElementById("table");
-        input.addEventListener("keypress", (e) => {
-          console.log(e.target.value);
-          console.log(e.keyCode)
-        });
-    
-        function checkChar(e) {
-          const char = String.fromCharCode(e, keyCode);
-    
-          console.log(e.keyCode);
-          console.log(char);
+      const input = document.getElementById("table");
+      input.addEventListener("keypress", (e) => {
+        if (!checkChar(e)) {
+          e.preventDefault();
         }
-      </script>
+      });
+      // checar caracteres especiais
+      function checkChar(e) {
+        const char = String.fromCharCode(e.keyCode);
+
+        console.log(e.keyCode);
+        //console.log(char);
+        const pattern = "[0-9]";
+        if (char.match(pattern)) {
+          console.log(char);
+          return true;
+        }
+      }
+    </script>
   </body>
-  
 </html>
