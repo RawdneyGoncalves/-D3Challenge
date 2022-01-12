@@ -39,27 +39,20 @@ Para medir a IFR com precisão, deve-se ter conhecimento do quadro completo do n
 detectados por meio de vigilância e foi calculada usando métodos brutos, dando origem a estimativas amplamente variáveis da CFR 
 por país: desde menos de 0,1% a mais de 25%.
 
-## Como calcular a CFR
-
-A Taxa de letalidade (CFR) é a proporção de indivíduos diagnosticados com uma determinada doença que morrem dessa doença 
-e, portanto, é uma medida de gravidade em meio aos casos detectados:
-
-Taxa de letalidade (CFR, em %) = (Número de mortes pela doença / Número de casos confirmados da doença) x 100
-
-# Premissa 1: A probabilidade de detecção de casos e mortes é uniforme ao longo do surto
-
-No início de um surto, a vigilância tende a se concentrar mais nos pacientes sintomáticos que procuram atendimento, de modo que os 
-casos mais leves e assintomáticos têm menor probabilidade de serem detectados, levando à superestimação da CFR. Essa superestimação pode diminuir à medida que aumentam os testes e a detecção ativa de casos. Um método para abordar isso é remover da análise os casos que ocorreram antes do estabelecimento de uma vigilância robusta, que inclui a aplicação de claras definições de caso.
-
 # Premissa 2: Todos os casos detectados foram resolvidos (ou seja, os casos relatados se recuperaram ou morreram)
 
-Durante uma epidemia em curso, alguns dos casos ativos já detectados podem subsequentemente vir a falecer, levando à subestimação da CFR estimada antes da morte deles. Esse efeito é acentuado nas epidemias de crescimento rápido (por exemplo, durante 
+O acrônimo CFR, conforme aplicado à mensuração do número de mortes em meio a todas as pessoas com uma determinada doença,
+é mais comumente chamado de “taxa de letalidade”, embora estritamente falando esse termo esteja incorreto porque o termo “taxa”
+é usado para denotar um componente de tempo, que está ausente na CFR. Alguns autores tentaram retificar essa incoerência usando
+o termo proporção de fatalidade de caso, ou razão de fatalidade de caso, que não é limitado pelo fato de o numerador ser um subconjunto do denominador (ou seja, a definição de uma proporção). O termo “risco de fatalidade de caso”, usado mais raramente, só é correto se a duração da doença clínica for conhecida. Para os fins deste documento, usaremos o termo “taxa de letalidade”.
+
+Durante uma epidemia em curso, alguns dos casos ativos já detectados podem subsequentemente vir a falecer, levando à subestimação da CFR estimada antes da morte deles. Esse efeito é acentuado nas epidemias de crescimento rápido (por exemplo, durante 
 a fase de crescimento exponencial da COVID-19)
 
 # Como calcular a CFR durante uma epidemia em curso
 
-A CFR calculada usando a fórmula acima durante epidemias em andamento fornece uma estimativa condicional da CFR e é influenciada por atrasos nas datas de notificação de casos e mortes. Isso leva a uma ampla variação nas estimativas da CFR ao longo 
-de uma epidemia, que tende a uma estimativa final estável da CFR à medida que os casos ativos são resolvidos
+
+A CFR calculada usando a fórmula acima durante epidemias em andamento fornece uma estimativa condicional da CFR e é influenciada por atrasos nas datas de notificação de casos e mortes. Isso leva a uma ampla variação nas estimativas da CFR ao longo de uma epidemia, que tende a uma estimativa final estável da CFR à medida que os casos ativos são resolvidos
 
 Uma solução simples para mitigar o viés resultante do atraso na resolução dos casos durante um surto em andamento é restringir a 
 análise aos casos resolvidos:
