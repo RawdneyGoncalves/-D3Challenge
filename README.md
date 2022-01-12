@@ -41,3 +41,12 @@ aos casos confirmados identificados.
 Para medir a IFR com precisão, deve-se ter conhecimento do quadro completo do número de infecções e mortes causadas pela doença. Consequentemente, neste estágio inicial da pandemia, a maioria das estimativas das taxas de mortalidade se baseou nos casos 
 detectados por meio de vigilância e foi calculada usando métodos brutos, dando origem a estimativas amplamente variáveis da CFR 
 por país: desde menos de 0,1% a mais de 25%.
+
+## Como calcular a CFR
+
+A Taxa de letalidade (CFR) é a proporção de indivíduos diagnosticados com uma determinada doença que morrem dessa doença 
+e, portanto, é uma medida de gravidade em meio aos casos detectados:
+
+Taxa de letalidade (CFR, em %) = (Número de mortes pela doença / Número de casos confirmados da doença) x 100
+
+
