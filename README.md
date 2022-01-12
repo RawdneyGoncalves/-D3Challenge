@@ -49,4 +49,12 @@ e, portanto, é uma medida de gravidade em meio aos casos detectados:
 
 Taxa de letalidade (CFR, em %) = (Número de mortes pela doença / Número de casos confirmados da doença) x 100
 
+# Premissa 1: A probabilidade de detecção de casos e mortes é uniforme ao longo do surto
 
+No início de um surto, a vigilância tende a se concentrar mais nos pacientes sintomáticos que procuram atendimento, de modo que os 
+casos mais leves e assintomáticos têm menor probabilidade de serem detectados, levando à superestimação da CFR. Essa superestimação pode diminuir à medida que aumentam os testes e a detecção ativa de casos. Um método para abordar isso é remover da análise os casos que ocorreram antes do estabelecimento de uma vigilância robusta, que inclui a aplicação de claras definições de caso.
+
+# Premissa 2: Todos os casos detectados foram resolvidos (ou seja, os casos relatados se recuperaram ou morreram)
+
+Durante uma epidemia em curso, alguns dos casos ativos já detectados podem subsequentemente vir a falecer, levando à subestimação da CFR estimada antes da morte deles. Esse efeito é acentuado nas epidemias de crescimento rápido (por exemplo, durante 
+a fase de crescimento exponencial da COVID-19)
