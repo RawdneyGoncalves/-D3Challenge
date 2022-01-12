@@ -29,3 +29,15 @@ somente um painel básico para testar a API via html, é bem mais rápido e agil
 
 
 ## Retrospectiva do código, entendo um pouco sobre terminologia: 
+
+# Uma característica importante de uma doença infecciosa, particularmente aquela causada por um novo patógeno como oSARS-CoV-2, 
+é sua gravidade, cuja medida final é sua capacidade de causar a morte. As taxas de mortalidade nos ajudam a entender a gravidade 
+de uma doença, identificar populações em risco e avaliar a qualidade dos cuidados de saúde.
+
+Existem duas medidas usadas para avaliar a proporção de indivíduos infectados com desfecho fatal. O primeiro é a taxa de mortalidade por infecção (Infection Fatality Ratio – IFR, em inglês), que estima a proporção de mortes em meio a todos os indivíduos 
+infectados. O segundo é a taxa de letalidade (Case Fatality Ratio – CFR, em inglês), que estima a proporção de mortes em meio 
+aos casos confirmados identificados.
+
+Para medir a IFR com precisão, deve-se ter conhecimento do quadro completo do número de infecções e mortes causadas pela doença. Consequentemente, neste estágio inicial da pandemia, a maioria das estimativas das taxas de mortalidade se baseou nos casos 
+detectados por meio de vigilância e foi calculada usando métodos brutos, dando origem a estimativas amplamente variáveis da CFR 
+por país: desde menos de 0,1% a mais de 25%.
