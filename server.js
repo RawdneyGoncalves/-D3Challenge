@@ -14,7 +14,6 @@ const PORT = process.env.PORT || 5000;
 //middllers
 app.set("view engine", "ejs");
 app.get("/", (req, res) => {
-  db.insertUser(1000, 2000);
   res.render("index");
 });
 
