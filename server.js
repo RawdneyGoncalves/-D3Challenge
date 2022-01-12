@@ -1,6 +1,10 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+
+const Controller = require("./controllers/CovidController")
+
+
 app.use(
   cors({
     origin: "http://localhost:8080"
@@ -15,16 +19,24 @@ app.get("/", (req, res) => {
 });
 
 covidMorteInfectados = [
-  { id: 1, mortes: 4098, infectados: 1130000 },
-  { id: 2, mortes: 3029, infectados: 868029 },
-  { id: 3, mortes: 5865, infectados: 2520000 },
-  { id: 4, mortes: 7754, infectados: 2540000 },
-  { id: 5, mortes: 7748, infectados: 2510000 },
-  { id: 6, mortes: 6663, infectados: 2520000 }
+  { id: 1, mortes: 4098, infectados: 1130000, recuperados:123213 },
+  { id: 2, mortes: 3029, infectados: 868029, recuperados: 123213},
+  { id: 3, mortes: 5865, infectados: 2520000, recuperados: 123123 },
+  { id: 4, mortes: 7754, infectados: 2540000, recuperados:123123 },
+  { id: 5, mortes: 7748, infectados: 2510000, recuperados:12312321 },
+  { id: 6, mortes: 6663, infectados: 2520000, recuperados: 91283321}
 ];
+
+app.get("/ddf/:id", Controller.getDay)
+
 
 app.get("/resultado/:id", (req, res) => {
   const { id } = req.params;
+  
+
+  for(var i = 0; i < id;i++){
+    console.log((covidMorteInfectados[i].mortes / covidMorteInfectados[i].infectados + covidMorteInfectados[i].recuperados) * 100)
+  }
 
   const selectedDay = covidMorteInfectados.find(
     (item) => item.id === Number(id)
@@ -70,3 +82,5 @@ const server = http.createServer(function (request, response) {
 app.listen(PORT, () => {
   console.log(`Server rodando na porta ${PORT}`);
 });
+
+
