@@ -18,7 +18,6 @@ configurar no Método GET e inserir a API:
 A aplicação foi desenvolvida em NODE, terá que baixar ás dependencias das ferramentas usadas: 
 npm install //  yarn start
 
-
 estou desenvolvendo um pequeno painel que irá ser consumido da API 
 
 Front-end básico: 
@@ -26,9 +25,7 @@ Foram corrigidos os erros de input, com o bloqueio de caracteres especiais,
 Link do que eu usei para verificar as keys bloqueadas: https://keycode.info/
 somente um painel básico para testar a API via html, é bem mais rápido e agil do que testar o código no terminal ;)
 
-
-
-## Retrospectiva do código, entendo um pouco sobre terminologia: 
+## entendo um pouco sobre terminologia: 
 
 # Uma característica importante de uma doença infecciosa, particularmente aquela causada por um novo patógeno como oSARS-CoV-2, 
 é sua gravidade, cuja medida final é sua capacidade de causar a morte. As taxas de mortalidade nos ajudam a entender a gravidade 
