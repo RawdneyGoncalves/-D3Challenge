@@ -38,7 +38,7 @@ Existem duas medidas usadas para avaliar a proporção de indivíduos infectados
 infectados. O segundo é a taxa de letalidade (Case Fatality Ratio – CFR, em inglês), que estima a proporção de mortes em meio 
 aos casos confirmados identificados.
 
-Para medir a IFR com precisão, deve-se ter conhecimento do quadro completo do número de infecções e mortes causadas pela doença. Consequentemente, neste estágio inicial da pandemia, a maioria das estimativas das taxas de mortalidade se baseou nos casos 
+Para medir a IFR com precisão, deve-se ter conhecimento do quadro completo do número de infecções e mortes causadas pela doença. Consequentemente, neste estágio inicial da pandemia, a maioria das estimativas das taxas de mortalidade se baseou nos casos 
 detectados por meio de vigilância e foi calculada usando métodos brutos, dando origem a estimativas amplamente variáveis da CFR 
 por país: desde menos de 0,1% a mais de 25%.
 
@@ -58,3 +58,15 @@ casos mais leves e assintomáticos têm menor probabilidade de serem detectados,
 
 Durante uma epidemia em curso, alguns dos casos ativos já detectados podem subsequentemente vir a falecer, levando à subestimação da CFR estimada antes da morte deles. Esse efeito é acentuado nas epidemias de crescimento rápido (por exemplo, durante 
 a fase de crescimento exponencial da COVID-19)
+
+# Como calcular a CFR durante uma epidemia em curso
+
+A CFR calculada usando a fórmula acima durante epidemias em andamento fornece uma estimativa condicional da CFR e é influenciada por atrasos nas datas de notificação de casos e mortes. Isso leva a uma ampla variação nas estimativas da CFR ao longo 
+de uma epidemia, que tende a uma estimativa final estável da CFR à medida que os casos ativos são resolvidos
+
+Uma solução simples para mitigar o viés resultante do atraso na resolução dos casos durante um surto em andamento é restringir a 
+análise aos casos resolvidos:
+
+Taxa de letalidade (CFR, em %) = (Números de mortes pela doença / Número de mortes pela doença + Números de recuperados pela doença) x 100
+
+No entanto, esse método não elimina todos os vieses relacionados a notificações atrasadas.
