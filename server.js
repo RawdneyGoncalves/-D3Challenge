@@ -10,7 +10,6 @@ app.use(
   })
 );
 //crio uma váriavel ambiente caso exista.
-const PORT = process.env.PORT || 5000;
 //engine do html
 app.set("view engine", "ejs");
 app.get("/", (req, res) => {
@@ -45,14 +44,4 @@ app.get("/:id", (req, res) => {
   return res.json(selectedDay);
 });
 
-const http = require("http");
-const server = http.createServer(function (request, response) {
-  response.setHeader("Acess-Control-Allow-Origin", "*");
-  response.writeHead(200, { "Content-Type": "text/html" });
-  response.write(covidMorteInfectados);
-  response.end();
-});
-
-app.listen(PORT, () => {
-  console.log(`Server rodando na porta ${PORT}`);
-});
+module.exports = app
