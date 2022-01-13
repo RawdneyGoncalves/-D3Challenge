@@ -64,6 +64,7 @@ No entanto, esse método não elimina todos os vieses relacionados a notificaç�
 
 
 # Artigo base: https://iris.paho.org/bitstream/handle/10665.2/52650/OPASWBRACOVID-1920110_por%20%281%29.pdf?sequence=1&isAllowed=y
+# https://www.news-medical.net/health/What-is-Case-Fatality-Rate-(CFR)-(Portuguese).aspx
 
 # Referências bibliográficas: 
 1. Kim G-U, Kim M-J, Ra SH, Lee J, Bae S, Jung J, et al. Clinical characteristics of asymptomatic and symptomatic patients with mild 
