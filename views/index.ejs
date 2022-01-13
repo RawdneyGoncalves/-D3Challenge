@@ -48,12 +48,15 @@
     }
 
     .send {
+
+      width: 80px;
       height: 42px;
       padding: 10px;
 
       background: #bd46a9;
       color: white;
 
+      outline: none;
       border: none;
       border-radius: 5px;
       font-weight: bold;
@@ -64,8 +67,20 @@
       cursor: pointer;
     }
 
+    .resultText {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      padding: 20px;
+      border-radius: 18px;
+    }
+
     .send:hover {
       background: darkorange;
+    }
+
+    .send:focus {
+      border: 1px solid #bd46a9;
     }
   </style>
   <title>D3 Test</title>
@@ -74,30 +89,58 @@
 <body>
   <form action="">
     <h1>Covid-19 cálculo IFE</h1>
-    <input type="text" id="table" name="table" onkeypress="checkChar" placeholder="Digite o dia ..."
-      class="inputnumber" />
-    <input type="submit" value="Enviar" class="send" />
+    <input type="text" id="table" name="table" placeholder="Digite o dia ..." class="inputnumber" />
+    <input value="Enviar" class="send" onClick="getContent()" />
   </form>
-  <script>
-    const input = document.getElementById("table");
-    input.addEventListener("keypress", (e) => {
-      if (!checkChar(e)) {
-        e.preventDefault();
-        fetch("http://localhost:8080")
-      }
-    });
-    // checar caracteres especiais
-    function checkChar(e) {
-      const char = String.fromCharCode(e.keyCode);
 
-      console.log(e.keyCode);
-      //console.log(char);
-      const pattern = "[0-9]";
-      if (char.match(pattern)) {
-        console.log(char);
-        return true;
+  <div id="result"></div>
+  <script>
+    function showResult(result) {
+      let resultElement = document.createElement('h1')
+      resultElement.textContent = result + ' media de letalidade'
+      resultElement.className = 'resultText'
+
+      let resultDiv = document.getElementById('result')
+
+      resultDiv.appendChild(resultElement)
+    }
+
+    function hideResult() {
+      try {
+        let result = document.querySelector('.resultText')
+
+        result.parentNode.removeChild(result)
+      } catch (error) {
+
       }
     }
+
+    async function handleApiResult(day) {
+      try {
+        const response = await fetch("http://localhost:5000/ddf/" + day, { method: 'GET' })
+        const responseData = await response.json()
+
+        showResult(responseData.mortes || '0')
+
+      } catch (error) {
+        console.error(error)
+      }
+    }
+
+    function getContent() {
+      hideResult()
+
+      const daySelected = document.querySelector('.inputnumber').value
+
+      const regexDigits = /\d/
+
+      const isOnlyDigits = regexDigits.test(daySelected)
+
+      if (isOnlyDigits) {
+        handleApiResult(daySelected)
+      }
+    }
+
   </script>
 </body>
 
