@@ -7,10 +7,10 @@ foi criado um servidor com a função de requisição e resposta(Consulta API)
 foi criado um conjunto de dados para ser verificado ao passar o ID
 
 Como testar a aplicação? 
-deve-se baixar um  API client para  testar a aplicação, recomendo duas: Postaman ou Insomnia, ou simplesmente pode testar usando o endereço:  http://localhost:5000 (EM DESENVOLVIMENTO).
+deve-se baixar um  API client para  testar a aplicação, recomendo duas: Postaman ou Insomnia, ou simplesmente pode testar usando o endereço:  
 configurar no Método GET e inserir a API: 
       http://localhost:5000/ID
-      ID = dia, irá retornar os respectivos números de infectados e respectivas mortes
+      ID = dia, irá retornar a taxa de letalidade dos números de infectados e respectivas mortes em dias futuros
       exemplo: 
       http://localhost:5000/ddf/DIA
 
