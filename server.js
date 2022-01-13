@@ -9,7 +9,7 @@ app.use(
     origin: "http://localhost:5000"
   })
 );
-//crio uma váriavel ambiente caso exista.
+
 //engine do html
 app.set("view engine", "ejs");
 app.get("/", (req, res) => {
