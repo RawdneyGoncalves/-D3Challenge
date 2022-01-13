@@ -24,7 +24,7 @@ covidMorteInfectados = [
   { id: 5, mortes: 7748, infectados: 2510000, recuperados: 12312321 },
   { id: 6, mortes: 6663, infectados: 2520000, recuperados: 91283321 }
 ];
-
+//  rota para cálculo Front-end
 app.get("/ddf/:id", Controller.getDay);
 
 
