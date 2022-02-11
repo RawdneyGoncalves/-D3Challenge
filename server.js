@@ -10,12 +10,12 @@ app.use(
   })
 );
 
-//engine do html
+
 app.set("view engine", "ejs");
 app.get("/", (req, res) => {
   res.render("index");
 });
-//CALCULO IRF NÃO USAVEL
+//desativado
 covidMorteInfectados = [
   { id: 1, mortes: 4098, infectados: 1130000, recuperados: 123213 },
   { id: 2, mortes: 3029, infectados: 868029, recuperados: 123213 },
@@ -24,7 +24,8 @@ covidMorteInfectados = [
   { id: 5, mortes: 7748, infectados: 2510000, recuperados: 12312321 },
   { id: 6, mortes: 6663, infectados: 2520000, recuperados: 91283321 }
 ];
-//  rota para cálculo Front-end
+
+
 app.get("/ddf/:id", Controller.getDay);
 
 
