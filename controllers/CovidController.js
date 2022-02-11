@@ -1,4 +1,4 @@
-//Arrays de dados
+
 //calculo CRF em curso
 const covidMorteInfectados = [
     { id: 1, mortes: 4129, infectados: 1126443, recuperados:1122314 },
@@ -8,7 +8,6 @@ const covidMorteInfectados = [
     { id: 5, mortes: 7774, infectados: 2513232, recuperados: 2505458},
     { id: 6, mortes: 6707, infectados: 2557219, recuperados: 2550512}
   ];
-//exporto o getDay  pra jogar no server(Juntamente com o cálculo )
 exports.getDay = function(req, res) {
     const { id } = req.params;
     console.log(id)
