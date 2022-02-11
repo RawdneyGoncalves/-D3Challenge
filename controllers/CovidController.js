@@ -15,7 +15,6 @@ exports.getDay = function(req, res) {
 let resultados = []
     for(var i = 0; i < id;i++){
       resultados[i] = (covidMorteInfectados[i].mortes / covidMorteInfectados[i].mortes + covidMorteInfectados[i].recuperados) * 100
-       // console.log((covidMorteInfectados[i].mortes / covidMorteInfectados[i].infectados + covidMorteInfectados[i].recuperados) * 100)
       }
 
     if (id <= 0) {
